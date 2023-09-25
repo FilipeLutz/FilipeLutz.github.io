@@ -62,14 +62,14 @@ body { background-color: #fef1ef }
     
 }
 
-.section-4 h2,
-.section-4 p {
-    color: #fff;
-}
-
 .section5 {
     background-color: lightcoral;
     padding: 12px;
+}
+
+.section-4 h2,
+.section-4 p {
+    color: #fff;
 }
 
 h1 {
