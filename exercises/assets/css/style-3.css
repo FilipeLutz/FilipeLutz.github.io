@@ -41,29 +41,25 @@ body { background-color: #fef1ef }
 .section1 {
     background-color: lemonchiffon;
     padding: 12px;
-    margin-bottom: 40px;
-    width: 220px
+    
 }
 
 .section2 {
     background-color: lightgreen;
     padding: 12px;
-    margin-bottom: 40px;
-    width: 220px
+    
 }
 
 .section3 {
     background-color: lightblue;
     padding: 12px;
-    margin-bottom: 40px;
-    width: 220px
+   
 }
 
 .section4 {
     background-color: darkblue;
     padding: 12px;
-    margin-bottom: 40px;
-    width: 220px
+    
 }
 
 .section-4 h2,
@@ -73,6 +69,7 @@ body { background-color: #fef1ef }
 
 .section5 {
     background-color: lightcoral;
+    padding: 12px;
 }
 
 h1 {
