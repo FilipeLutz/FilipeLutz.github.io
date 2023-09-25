@@ -10,7 +10,7 @@ img { width: 100%; height: auto; display: block }
 input, button, textarea, select { font: inherit }
 
 /* ====== PADDING AROUND WEB PAGE BODY CONTENT ======  */
-body { padding: 4% 20% }
+section { padding: 4% 20% }
 
 /* ====== PADDING AROUND CONTENT ======  */
 /* Desktops/Laptops */
