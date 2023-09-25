@@ -40,22 +40,30 @@ body { background-color: #fef1ef }
 
 .section1 {
     background-color: lemonchiffon;
-    padding: 14px;
+    padding: 12px;
+    margin-bottom: 40px;
+    width: 220px
 }
 
 .section2 {
     background-color: lightgreen;
-    padding: 14px;
+    padding: 12px;
+    margin-bottom: 40px;
+    width: 220px
 }
 
 .section3 {
     background-color: lightblue;
-    padding: 14px;
+    padding: 12px;
+    margin-bottom: 40px;
+    width: 220px
 }
 
 .section4 {
     background-color: darkblue;
-    padding: 14px;
+    padding: 12px;
+    margin-bottom: 40px;
+    width: 220px
 }
 
 .section-4 h2,
