@@ -38,6 +38,31 @@ body { background-color: #fef1ef }
     body { padding: 5% 5% } 
 }
 
+.section1 {
+    background-color: lemonchiffon;
+}
+
+.section2 {
+    background-color: lightgreen;
+}
+
+.section3 {
+    background-color: lightblue;
+}
+
+.section4 {
+    background-color: darkblue;
+}
+
+.section-4 h2,
+.section-4 p {
+    color: #fff;
+}
+
+.section5 {
+    background-color: lightcoral;
+}
+
 h1 {
 font-size: 84px;
 text-align: center;
