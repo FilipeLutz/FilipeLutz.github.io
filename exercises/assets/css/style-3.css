@@ -43,3 +43,15 @@ p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
+
+*Desktops/Laptops*/
+@media (min-width: 768px) { h1 { color: blue;}
+   
+
+}
+
+/*Mobiles*/
+@media (max-width: 767px) { h1 { color: red;}
+    
+
+}
