@@ -24,7 +24,7 @@ input, button, textarea, select { font: inherit }
 
 /* ====== PADDING AROUND WEB PAGE BODY CONTENT ======  */
 body { padding: 4% 20% }
-body { background-color: peru}
+body { background-color: rgb(164, 249, 130)}
 
 /* ====== PADDING AROUND CONTENT ======  */
 
