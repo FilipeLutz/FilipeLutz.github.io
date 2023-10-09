@@ -23,17 +23,21 @@ img { width: 100%; height: auto; display: block }
 input, button, textarea, select { font: inherit }
 
 /* ====== PADDING AROUND WEB PAGE BODY CONTENT ======  */
+
 body { padding: 4% 20% }
-body { background-color: rgb(164, 249, 130)}
+
+body { background-color: rgb(180, 120, 253)}
 
 /* ====== PADDING AROUND CONTENT ======  */
 
 /* Desktops/Laptops */
+
 @media (min-width: 768px) { 
     body { padding: 4% 20% } 
 }
 
 /* Mobiles */
+
 @media (max-width: 767px) { 
     body { padding: 8% 5% } 
 }
@@ -64,17 +68,15 @@ font-size: 18px;
 font-family: sans-serif;
 line-height: 1.6;
 margin-bottom: 20px;
-color: darkslateblue;
+color: rgb(0, 0, 0);
 }
 
 /*Desktops/Laptops*/
+
 @media (min-width: 768px) { h1 { color: blue;}
-
-
 }
 
 /*Mobiles*/
+
 @media (max-width: 767px) { h1 { color: red;}
-
-
 }

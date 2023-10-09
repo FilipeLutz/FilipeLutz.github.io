@@ -1,5 +1,4 @@
 /*  ============= WEB BROWSER RESETS ============ */
-
 *
 { margin: 0; padding: 0; border: none 
 }
@@ -23,6 +22,7 @@ img { width: 100%; height: auto; display: block }
 input, button, textarea, select { font: inherit }
 
 /* ====== PADDING AROUND WEB PAGE BODY CONTENT ======  */
+
 body { padding: 4% 20% }
 
 body { background-color: rgb(90, 255, 255) }  
@@ -31,9 +31,11 @@ h2, p { color: #1e266d }
 /* ====== PADDING AROUND CONTENT ======  */
 
 /* Desktops/Laptops */
+
 @media (min-width: 768px) { body { padding: 4% 20% } }
 
 /* Mobiles */
+
 @media (max-width: 767px) { body { padding: 12% 8% } }
 
 h1 {
@@ -42,35 +44,39 @@ text-align: center;
 font-weight: normal;
 letter-spacing: -2px;
 margin-bottom: 32px;
+margin-top: 32px;
 color: blue;
 }
 
 h2 {
-font-size: 36px;
+font-size: 38px;
 margin-bottom: 4px;
 }
 
 h3 {
-font-size: 24px;
-margin-bottom: 4px;
+font-size: 26px;
+margin-bottom: 32px;
 color: blue;
 }
 
 p {
-font-size: 18px;
+font-size: 22px;
 font-family: sans-serif;
 line-height: 1.6;
 margin-bottom: 20px;
 }
 
 /*Desktops/Laptops*/
+
 @media (min-width: 768px) { h1 { color: blue;}
-
-
 }
 
 /*Mobiles*/
+
 @media (max-width: 767px) { h1 { color: red;}
+}
 
-
+img {  
+margin-top: 32px;
+margin-bottom: 32px;   
 }

@@ -23,17 +23,26 @@ img { width: 100%; height: auto; display: block }
 input, button, textarea, select { font: inherit }
 
 /* ====== PADDING AROUND WEB PAGE BODY CONTENT ======  */
+
 body { padding: 4% 20% }
 body { background-color: #fef1ef }
 
 /* ====== PADDING AROUND CONTENT ======  */
 
+body { padding: 4% 20% }
+
+/* ====== PADDING AROUND SECTION CONTENT ======  */
+
+section *:last-child { margin-bottom: 0 !important }
+
 /* Desktops/Laptops */
+
 @media (min-width: 768px) { 
     body { padding: 4% 20% } 
 }
 
 /* Mobiles */
+
 @media (max-width: 767px) { 
     body { padding: 5% 5% } 
 }
@@ -41,35 +50,42 @@ body { background-color: #fef1ef }
 .section1 {
     background-color: lemonchiffon;
     padding: 12px;
-    
+    margin-bottom: 24px;
 }
 
 .section2 {
     background-color: lightgreen;
     padding: 12px;
-    
+    margin-bottom: 24px;
 }
 
 .section3 {
     background-color: lightblue;
     padding: 12px;
-   
+    margin-bottom: 24px;
 }
 
 .section4 {
     background-color: darkblue;
     padding: 12px;
-    
+    margin-bottom: 24px;
 }
 
 .section5 {
     background-color: lightcoral;
     padding: 12px;
+    margin-bottom: 24px;
 }
 
-.section-4 h2,
-.section-4 p {
-    color: #fff;
+.section6 {
+    background-color: lemonchiffon;
+    padding: 12px;
+    margin-bottom: 32px;
+}
+
+.section4 h2,
+.section4 p {
+    color: #ffffff;
 }
 
 h1 {
@@ -102,13 +118,11 @@ color: darkslateblue;
 }
 
 /*Desktops/Laptops*/
+
 @media (min-width: 768px) { h1 { color: blue;}
-
-
 }
 
 /*Mobiles*/
+
 @media (max-width: 767px) { h1 { color: red;}
-
-
 }
