@@ -1,0 +1,128 @@
+/*  ============= WEB BROWSER RESETS ============ */
+
+*
+{ margin: 0; padding: 0; border: none 
+}
+*, *::before, *::after { 
+    box-sizing: border-box 
+}
+html { 
+    height: 100%; font-size: 100%; font: inherit; 
+    vertical-align: baseline; scroll-behavior: smooth; scroll-padding-top: 20px 
+}
+body { 
+    line-height: 1.5; min-height: 100vh 
+}
+@media (max-width: 767px ) { 
+    body { text-rendering: optimizeSpeed } 
+}
+@media (min-width: 768px ) { 
+    body { text-rendering: optimizeLegibility } 
+}
+img { width: 100%; height: auto; display: block }
+input, button, textarea, select { font: inherit }
+
+/* ====== PADDING AROUND WEB PAGE BODY CONTENT ======  */
+
+body { padding: 4% 20% }
+body { background-color: #fef1ef }
+
+/* ====== PADDING AROUND CONTENT ======  */
+
+body { padding: 4% 20% }
+
+/* ====== PADDING AROUND SECTION CONTENT ======  */
+
+section *:last-child { margin-bottom: 0 !important }
+
+/* Desktops/Laptops */
+
+@media (min-width: 768px) { 
+    body { padding: 4% 20% } 
+}
+
+/* Mobiles */
+
+@media (max-width: 767px) { 
+    body { padding: 5% 5% } 
+}
+
+.section1 {
+    background-color: lemonchiffon;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.section2 {
+    background-color: lightgreen;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.section3 {
+    background-color: lightblue;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.section4 {
+    background-color: darkblue;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.section5 {
+    background-color: lightcoral;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.section6 {
+    background-color: lemonchiffon;
+    padding: 12px;
+    margin-bottom: 32px;
+}
+
+.section4 h2,
+.section4 p {
+    color: #ffffff;
+}
+
+h1 {
+font-size: 84px;
+text-align: center;
+font-weight: normal;
+letter-spacing: -2px;
+margin-bottom: 32px;
+color: blue;
+}
+
+h2 {
+font-size: 36px;
+margin-bottom: 4px;
+color: blue;
+}
+
+h3 {
+font-size: 24px;
+margin-bottom: 4px;
+color: blue;
+}
+
+p {
+font-size: 18px;
+font-family: sans-serif;
+line-height: 1.6;
+margin-bottom: 20px;
+color: darkslateblue;
+}
+
+/*Desktops/Laptops*/
+
+@media (min-width: 768px) { h1 { color: blue;}
+}
+
+/*Mobiles*/
+
+@media (max-width: 767px) { h1 { color: red;}
+}
