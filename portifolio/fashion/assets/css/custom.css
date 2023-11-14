@@ -16,3 +16,21 @@ header h1 { font-size: var(--font-size-xxxl) }
 
 body { font-family: 'Playfair Display', serif;}
 
+.col-1 h2 { font-size: var(--font-size-xxxl) }
+.col-1 h3 { font-size: var(--font-size-xl) }
+.col-4 h3 { font-size: var(--font-size-lg) }
+.container-text h2 { font-size: var(--font-size-xl) }
+.container-text h1 { font-size: var(--font-size-xxxl) }
+.section-selector-1 h2 { font-size: var(--font-size-xxl) }
+.section-selector-1 p { font-size: var(--font-size-xl) }
+
+footer.theme-dark > ul.footer-links a:link,
+footer.theme-dark > ul.footer-links a:visited 
+{ text-decoration-color: transparent; font-size: var(--font-size-md) }
+
+footer.theme-dark > ul.footer-links a:focus,
+footer.theme-dark > ul.footer-links a:hover,
+footer.theme-dark > ul.footer-links a:active 
+{ text-decoration-color: white; font-size: var(--font-size-md); color: var(--white-000) }
+
+footer.theme-dark { background-color: var(--green-800) }
