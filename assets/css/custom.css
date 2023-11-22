@@ -1,17 +1,12 @@
-/* Add your custom CSS here */
 
-.section-selector-1 { background-color: var(--green-800) }
-.section-selector-2 { background-color: var(--gray-200) }
-.section-selector-4.theme-dark { background-color: var(--green-800) }
-.section-selector-4 div[class^='flex-cols-'] div[class^='col-'] figure.icon { color: var(--white-000) }
+nav.theme-dark, nav.theme-dark ul.links-wrapper.active { background-color: #0f172a }
 
-.theme-dark.section-selector-1 a:link,
-.theme-dark.section-selector-1 a:visited { color: var(--green-200) }
+header.theme-dark   { background-color: #0f172a }
 
-.theme-dark.section-selector-1 a:focus,
-.theme-dark.section-selector-1 a:hover,
-.theme-dark.section-selector-1 a:active { color: var(--white-000) }
+header.theme-dark  h1 { color: var(--sky-400); }
 
-header h1 { font-size: var(--font-size-xxxl) } 
+section.theme-dark   { background-color: #0f172a }
 
-body { font-family: 'Playfair Display', serif;}
+footer.theme-dark   { background-color: #0f172a }
+
+header .col-text h2, .col-1 > h3 { line-height: 1.8 }
