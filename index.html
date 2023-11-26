@@ -42,6 +42,9 @@
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
         <link rel="manifest" href="assets/img/site.webmanifest">
+      
+        <!-- Styles for Cookie Consent Popup Message  -->
+        <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
 
     </head>
 
@@ -177,6 +180,24 @@
         </footer>
 
         <script src="https://lunevedy.com/assets/js/lunevedy.js"></script>
+        
+        <!-- JavaScript for Cookie Consent Popup Message -->
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+        <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                }
+            },
+            "content": {
+                "href": "filipelutz.github.io/privacy.html"
+            }
+        });
+        </script>
 
     </body>
 

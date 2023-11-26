@@ -73,6 +73,9 @@
             <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
             <link rel="manifest" href="assets/img/site.webmanifest">
 
+            <!-- Styles for Cookie Consent Popup Message  -->
+            <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
+
     </head>
 
     <body>
@@ -174,6 +177,24 @@
         <p>Additional or different terms, conditions, and notices may apply to specific materials, information, products, software, and services offered through this website. In the event of any conflict, such additional or different terms, conditions, and notices will prevail over these Terms of Use. Please see the applicable agreement or notice.</p>
 
         <h3><a href="index.html">Back to Home Page</a></h3>
+
+        <!-- JavaScript for Cookie Consent Popup Message -->
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+        <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                }
+            },
+            "content": {
+                "href": "filipelutz.github.io/privacy.html"
+            }
+        });
+        </script>
 
     </body>
     
