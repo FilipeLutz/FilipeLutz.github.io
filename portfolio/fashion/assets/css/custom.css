@@ -1,0 +1,27 @@
+/* Add your custom CSS here */
+
+.section-selector-1 { background-color: var(--green-800) }
+.section-selector-2 { background-color: var(--gray-200) }
+.section-selector-4.theme-dark { background-color: var(--green-800) }
+.section-selector-4 div[class^='flex-cols-'] div[class^='col-'] figure.icon { color: var(--white-000) }
+
+.theme-dark.section-selector-1 a:link,
+.theme-dark.section-selector-1 a:visited { color: var(--green-200) }
+
+.theme-dark.section-selector-1 a:focus,
+.theme-dark.section-selector-1 a:hover,
+.theme-dark.section-selector-1 a:active { color: var(--white-000) }
+
+header h1 { font-size: var(--font-size-xxxl) } 
+
+body { font-family: 'Playfair Display', serif;}
+
+.col-1 h2 { font-size: var(--font-size-xxxl) }
+.col-1 h3 { font-size: var(--font-size-xl) }
+.col-4 h3 { font-size: var(--font-size-lg) }
+.container-text h2 { font-size: var(--font-size-xl) }
+.container-text h1 { font-size: var(--font-size-xxxl) }
+.section-selector-1 h2 { font-size: var(--font-size-xxl) }
+.section-selector-1 p { font-size: var(--font-size-xl) }
+
+footer.theme-dark { background-color: var(--teal-900); font-family: 'Arial' }
