@@ -10,3 +10,11 @@ section.theme-dark   { background-color: #0f172a }
 footer.theme-dark   { background-color: #0f172a }
 
 header .col-text h2, .col-1 > h3 { line-height: 1.8 }
+
+header .col-text h1 span.name {
+    background: -webkit-gradient(linear,left top,right top,color-stop(8.97%,#684BFE),color-stop(75.42%,#E178E7),color-stop(100.1%,#05E5AD));
+    background: linear-gradient(90deg,#684BFE 8.97%,#E178E7 75.42%,#05E5AD 100.1%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
