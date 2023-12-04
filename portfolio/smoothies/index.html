@@ -5,6 +5,7 @@
 <head>
 
     <script src="https://cmp.osano.com/169jhCTwBJL5W4qTZ/8f766ab5-0cad-4f80-aa1c-1d174f6f2974/osano.js"></script> 
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +38,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="manifest" href="assets/img/site.webmanifest">
+
+    <!-- Styles for Cookie Consent Popup Message  -->
+    <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
 
     </head>
 
@@ -163,6 +167,24 @@
 
         </footer>
         <!-- footer ends here -->
+
+        <!-- JavaScript for Cookie Consent Popup Message -->
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+        <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                }
+            },
+            "content": {
+                "href": "privacy.html"
+            }
+        });
+        </script>
 
     </body>
 

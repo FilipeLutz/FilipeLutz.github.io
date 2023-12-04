@@ -1,0 +1,22 @@
+
+nav.theme-dark, nav.theme-dark ul.links-wrapper.active { background-color: #0f222a }
+
+header.theme-dark   { background-color: #0f222a }
+
+header.theme-dark  h1 { color: var(--sky-400); }
+
+section.theme-dark   { background-color: #0f222a;
+    background-image: linear-gradient(360deg, #204656, #0f222a);
+}
+
+footer.theme-dark   { background-color: #0f222a }
+
+header .col-text h2, .col-1 > h3 { line-height: 1.8 }
+
+h1 {
+    background: -webkit-gradient(linear,left top,right top,color-stop(8.97%,#0f2a24),color-stop(75.42%,#E178E7),color-stop(100.1%,#05E5AD));
+    background: linear-gradient(90deg,#684BFE 8.97%,#e588ea 75.42%,#05E5AD 100.1%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
