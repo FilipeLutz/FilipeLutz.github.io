@@ -1,0 +1,12 @@
+
+nav.theme-dark, nav.theme-dark ul.links-wrapper.active { background-color: #0f222a }
+
+header.theme-dark   { background-color: #0f222a }
+
+header.theme-dark  h1 { color: #0dcacd }
+
+section.theme-dark   { background-color: #0f222a }
+
+footer.theme-dark   { background-color: #0f222a }
+
+header .col-text h2, .col-1 > h3 { line-height: 1.8 }
