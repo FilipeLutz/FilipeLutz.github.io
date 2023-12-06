@@ -3,7 +3,7 @@ nav.theme-dark, nav.theme-dark ul.links-wrapper.active { background-color: #0f2a
 
 header.theme-dark   { background-color: #0f2a18 }
 
-header.theme-dark  h1 { color: #d33501 }
+header.theme-dark  h1 { color: #7aff2e; text-shadow: -5px 3px 3px #1f5330 }
 
 section.theme-dark   { background-color: #0f2a18;
     background-image: linear-gradient(180deg, #0f2a18, #1f5330);
