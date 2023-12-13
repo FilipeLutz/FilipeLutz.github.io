@@ -36,7 +36,7 @@ h2, p { color: #1e266d }
 
 /* Mobiles */
 
-@media (max-width: 767px) { body { padding: 12% 8% } }
+@media (max-width: 767px) { body { padding: 8% 5% } }
 
 h1 {
 font-size: 68px;
