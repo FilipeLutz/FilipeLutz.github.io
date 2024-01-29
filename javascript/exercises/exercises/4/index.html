@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Heading</h2>
+
+    <p>Donec sodales, lorem nec aliquet hendrerit, dolor mi blandit nisi, 
+        eu tempor est quam eget nulla. Donec dictum ex fringilla feugiat tempus.</p>
+            
+    <p>Mauris sagittis consectetur diam, vitae pharetra lectus faucibus vestibulum. 
+        Vivamus tincidunt mattis mi eu vehicula.</p>
+
+    <script>
+        let someVar;
+        // declare empty variable 
+        console.log(`Data type of someVar: ${typeof someVar}`);
+        // returns undefined  
+        someVar = "12";
+        console.log(`Data type of someVar: ${typeof someVar}`);
+        // returns string 
+        someVar = 12;
+        console.log(`Data type of someVar: ${typeof someVar}`);
+        // returns number 
+        someVar = "12";
+        console.log(`Data type of someVar: ${typeof someVar}`);
+        // returns string 
+
+        const stringVar = "Some text";
+        // declare string variable 
+        console.log(`Is this not a number ("Some text"): ${isNaN(stringVar)}`);
+        // returns true  
+        const numVar = 42;			
+        console.log(`Is this not a number ("42"): ${isNaN(numVar)}`);
+        // returns false  
+
+    </script>
+    
+</body>
+</html>
