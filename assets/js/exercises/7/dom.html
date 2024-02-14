@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            H1 {display: inline-block;
+                padding: 10px;}
+
+            h2 {padding: 10px;
+               display: inline-block;}
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1 id="myHeading">Heading</h1>
+
+        <h2 id="myParagragh1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Asperiores voluptates accusantium culpa tempora libero corrupti, 
+            optio iste ut nihil perspiciatis fugit tempore magni cumque! Est dolor magnam ipsum voluptates nobis?</h2>
+
+        <h2 id="myParagragh2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Asperiores voluptates accusantium culpa tempora libero corrupti, 
+            optio iste ut nihil perspiciatis fugit tempore magni cumque! Est dolor magnam ipsum voluptates nobis?</h2>
+
+        <script>
+
+            // Function declaration
+                let varHeading = document.getElementById("myHeading").innerText;
+                let myP = document.getElementById("myParagragh1").innerText;
+                let myP2 = document.getElementById("myParagragh2").innerText;
+
+                varHeading = "New Heading!";
+                document.getElementById("myHeading").innerText = varHeading;
+                document.getElementById("myHeading").style.color = 'green';
+                document.getElementById("myHeading").style.backgroundColor = 'yellow';
+
+                document.getElementById("myParagragh1").style.color = 'purple';
+                document.getElementById("myParagragh1").style.backgroundColor = 'pink';
+
+                document.getElementById("myParagragh2").style.color = 'lightblue';
+                document.getElementById("myParagragh2").style.backgroundColor = 'blue';
+
+                console.log(varHeading);
+                console.log(myP);
+                console.log(myP2);
+
+        </script>
+
+    </body>
+
+</html>
