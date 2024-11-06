@@ -138,26 +138,3 @@ nav {
     background-color: #007bff;
     color: white;
 }
-
-/* Default nav styles for desktop */
-nav {
-    position: fixed !important;
-    top: 0;
-    left: 14%;
-    width: 70.5%;
-    height: 60px;
-    z-index: 1000;
-    background-color: #f4f4f9;
-}
-
-/* Adjust margin for main content */
-.container {
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
-
-/* Button styling */
-#btn-cta {
-    background-color: #007bff;
-    color: white;
-}
