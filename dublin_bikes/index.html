@@ -5,14 +5,72 @@
 
         <meta charset="UTF-8">
         <title>Dublin Bikes Station</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
+        <link rel="stylesheet" href="../assets/css/custom.css" />
         <link rel="stylesheet" href="./css/dublinbike.css">
+        <!-- Font Awesome 6 icons. Delete if not using. -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- jQuery and Google Maps API -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGNQxRTz-4dhOwkRb5Xbyv6PghMePSjGU"></script>
         <script src="./js/dublinbike.js" defer></script>
 
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FR89ZCHJ9"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9FR89ZCHJ9');
+        </script>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+        <link rel="manifest" href="../assets/img/site.webmanifest">
+
+        <!-- Styles for Cookie Consent Popup Message  -->
+        <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
+
     </head>
 
     <body>
+
+        <!-- menu and 'hero block' header -->
+        <nav>
+            
+            <div class="container-menu">
+
+                <a href="../index.html" class="brand">
+                    <img src="../assets/img/Logo.png" alt="logo">
+                </a>
+            
+                <div class="container-menu-links">
+            
+                    <div class="nav-toggle" id="nav-toggle-btn">
+                        <div class="bar-1"></div>
+                        <div class="bar-2"></div>
+                        <div class="bar-3"></div>
+                    </div>
+            
+                    <ul class="links-wrapper">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../portfolio/index.html">Portfolio</a></li>
+                        <li><a href="../portfolio/store/index.html">Store</a></li>
+                        <li><a class="btn btn-solid btn-soft" id="btn-cta" href="../contact/index.html"><span>Contact</span><i class="fa-regular fa-envelope"></i></a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
 
         <div class="container">
 
