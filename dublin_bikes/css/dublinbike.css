@@ -119,13 +119,12 @@ h2 {
 }
 
 nav {
-    position: fixed !important;
+    position: fixed;
     top: 0;
-    left: 14%;
-    width: 70.5%;
-    height: 60px;
+    width: 70%;
     z-index: 1000;
     background-color: #f4f4f9;
+    padding-bottom: 15px;
 }
 
 .container {
