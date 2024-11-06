@@ -99,6 +99,8 @@ h2 {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
 
+    body { text-rendering: optimizeLegibility } 
+
     .container {
         flex-direction: column;
     }
@@ -121,10 +123,11 @@ h2 {
 nav {
     position: fixed;
     top: 0;
+    left: 14%;
     width: 70%;
     z-index: 1000;
     background-color: #f4f4f9;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .container {
