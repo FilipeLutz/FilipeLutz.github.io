@@ -8,7 +8,7 @@ $(document).ready(function () {
     const closeIcon = document.getElementById("closeIcon");
 
     toggleButton.addEventListener("click", () => {
-    // Toggle the "show" class for the navbar links
+    // Toggle the navbar    
     navbarLinks.classList.toggle("show");
 
     // Toggle the icons
