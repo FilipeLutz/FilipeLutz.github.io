@@ -1,6 +1,8 @@
 $(document).ready(function () {
     let map, marker;
 
+    
+
     // Load the JSON file
     $.getJSON('./json/dublinbike.json', function (data) {
         let stations = data;
@@ -27,6 +29,11 @@ $(document).ready(function () {
                     <p><strong>Location:</strong> (${station.position.lat}, ${station.position.lng})</p>
                 </div>
             `);
+        
+            // Show the map container
+            $('#map').fadeIn();
+        
+            // Initialize the map with the station's coordinates
             initMap(station.position.lat, station.position.lng);
         }
 
@@ -55,7 +62,14 @@ $(document).ready(function () {
         $('#searchBox').on('input', function () {
             const query = $(this).val().toLowerCase();
             const filteredStations = stations.filter(station => station.name.toLowerCase().includes(query));
+        
             displayStationList(filteredStations);
+        
+            // Hide the map if no stations are found
+            if (filteredStations.length === 0) {
+                $('#map').fadeOut();
+                $('#stationDetail').html('<p>Select a station from the list to view details.</p>');
+            }
         });
 
         // Handle station clicks

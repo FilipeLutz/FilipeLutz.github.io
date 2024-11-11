@@ -36,7 +36,7 @@ h2 {
 }
 .list-container {
     width: 35%;
-    max-height: 95vh;
+    max-height: 120vh;
 }
 .detail-container {
     width: 60%;
@@ -48,23 +48,24 @@ h2 {
     height: 300px; 
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 /* Search and List Styling */
 #searchBox {
     width: 100%;
     padding: 10px;
-    margin: 20px 0; 
+    margin: 10px 0; 
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 #stationList {
-    max-height: calc(80vh - 120px);
+    max-height: calc(80vh - 0.5px);
     overflow-y: auto;
-    margin-top: 20px; 
+    margin-top: 10px; 
 }
 .station {
     padding: 15px;
@@ -82,7 +83,7 @@ h2 {
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 .station-detail-card h3 {
     color: #333;
@@ -98,41 +99,90 @@ h2 {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-
-    body { text-rendering: optimizeLegibility } 
-
+    body {
+      text-rendering: optimizeLegibility;
+    }
+  
     .container {
-        flex-direction: column;
+      flex-direction: column;
+      align-items: center; /* Center elements within the container */
     }
+  
+    /* Center the navigation bar horizontally */
+    nav {
+      justify-content: center;
+    }
+  
+    .container-menu { /* Wrap brand logo and nav toggle for centering */
+      display: flex;
+      justify-content: space-between;
+      width: 100%;  /* Take up full width on mobile */
+    }
+  
     .list-container, .detail-container {
-        width: 100%;
-        margin: 10px 0;
+      width: 100%;
+      margin: 10px 0;
     }
+  
     #stationList {
-        max-height: 50vh;
+      max-height: 50vh;
+      overflow-y: auto; /* Enable scrolling if needed */
     }
+  
     .station-detail-card h3 {
-        font-size: 1.2em;
+      font-size: 1.2em;
     }
+  
     .station-detail-card p {
-        font-size: 0.9em;
+      font-size: 0.9em;
     }
-
-}
+  
+    /* Mobile Navigation Styles */
+    .nav-toggle {
+      display: block; /* Ensure the toggle button is visible on mobile */
+    }
+  
+    .links-wrapper {
+      /* Mobile-specific styles for the navigation links */
+      position: fixed; /* Fix the menu to the top on mobile */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; /* Stretch the menu to cover the entire viewport */
+      background-color: #f4f4f9;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* Ensure the menu is above other content */
+      display: none; /* Initially hide the menu */
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .links-wrapper.show { /* Style for the open menu */
+      display: flex; /* Show the menu links */
+      flex-direction: column; /* Stack links vertically */
+      align-items: center; /* Center links horizontally */
+    }
+  
+    /* Adjust map size for better mobile viewing */
+    #map {
+      height: 250px; /* Reduce height for better mobile experience */
+    }
+  }
 
 nav {
     position: fixed;
     top: 0;
-    left: 14%;
-    width: 70%;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    background-color: #f4f4f9;
+    background-color: #ffffff;
     padding-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .container {
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 #btn-cta {
