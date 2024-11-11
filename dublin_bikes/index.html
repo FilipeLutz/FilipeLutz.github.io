@@ -2,67 +2,56 @@
 <html lang="en">
 
     <head>
-
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dublin Bikes Station</title>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
-        <link rel="stylesheet" href="../assets/css/custom.css" />
         <link rel="stylesheet" href="./css/dublinbike.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
         <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-        <!-- Google tag (gtag.js) -->
+        <!-- Google Tag Manager -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FR89ZCHJ9"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-9FR89ZCHJ9');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9FR89ZCHJ9');
         </script>
 
-        <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
-        <link rel="manifest" href="../assets/img/site.webmanifest">
-
-        <!-- Styles for Cookie Consent Popup Message  -->
-        <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
+        <link rel="icon" href="../assets/img/favicon-32x32.png">
 
     </head>
 
     <body>
 
-        <!-- menu and 'hero block' header -->
-        <nav>
-            
-            <div class="container-menu">
+        <!-- Navbar -->
+        <nav class="navbar">
+
+            <div>
 
                 <a href="../index.html" class="brand">
-                    <img src="../assets/img/Logo.png" alt="logo">
-                </a>
-            
-                <div class="container-menu-links">
-            
-                    <div class="nav-toggle" id="nav-toggle-btn">
-                        <div class="bar-1"></div>
-                        <div class="bar-2"></div>
-                        <div class="bar-3"></div>
-                    </div>
-            
-                    <ul class="links-wrapper">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../portfolio/index.html">Portfolio</a></li>
-                        <li><a href="../portfolio/store/index.html">Store</a></li>
-                        <li><a class="btn btn-solid btn-soft" id="btn-cta" href="../contact/index.html"><span>Contact</span><i class="fa-regular fa-envelope"></i></a></li>
-                    </ul>
 
-                </div>
+                    <img src="../assets/img/Logooo.png" alt="Logo">
+
+                </a>
+
+            </div>
+
+            <button class="navbar-toggle" id="responsiveMenu">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+                <i class="fa-solid fa-x" id="closeIcon"></i>
+            </button>
+
+            <div class="navbar-links" id="navbarLinks">
+                
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../portfolio/index.html">Portfolio</a></li>
+                <li><a href="../portfolio/store/index.html">Store</a></li>
+                <li><a class="btn btn-solid btn-soft" id="btn-cta" href="../contact/index.html"><span>Contact</span><i class="fa-regular fa-envelope"></i></a></li>
 
             </div>
 
@@ -72,27 +61,18 @@
 
             <!-- Station List -->
             <div class="list-container">
-
                 <h2>Dublin Bike Stations</h2>
-
                 <input type="text" id="searchBox" placeholder="Search by station name">
-
                 <div id="stationList"></div>
-
             </div>
 
-            <!-- Station Detail and Map -->
+            <!-- Station Details and Map -->
             <div class="detail-container">
-
                 <div id="stationDetail" class="station-detail-card">
-
                     <h3>Station Details</h3>
-
                     <p>Select a station from the list to view details.</p>
-
                 </div>
 
-                <!-- Map Container -->
                 <div id="map"></div>
 
             </div>

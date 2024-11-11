@@ -1,85 +1,88 @@
 $(document).ready(function () {
     let map, marker;
+    let currentStationId = null;
 
-    
+    const toggleButton = document.getElementById("responsiveMenu");
+    const navbarLinks = document.getElementById("navbarLinks");
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
 
-    // Load the JSON file
-    $.getJSON('./json/dublinbike.json', function (data) {
-        let stations = data;
+    toggleButton.addEventListener("click", () => {
+    // Toggle the "show" class for the navbar links
+    navbarLinks.classList.toggle("show");
 
-        // Display the station list
-        function displayStationList(stations) {
-            $('#stationList').empty();
-            stations.forEach(station => {
-                $('#stationList').append(`<div class="station" data-id="${station.number}">
-                    ${station.name}
-                </div>`);
-            });
-        }
+    // Toggle the icons
+    if (navbarLinks.classList.contains("show")) {
+        menuIcon.style.display = "none";
+        closeIcon.style.display = "inline";
+    } else {
+        menuIcon.style.display = "inline";
+        closeIcon.style.display = "none";
+    }
+    });
 
-        // Show station details and map when clicked
-        function displayStationDetail(station) {
-            $('#stationDetail').html(`
-                <div class="station-detail-card">
-                    <h3>${station.name}</h3>
-                    <p><strong>Address:</strong> ${station.address}</p>
-                    <p><strong>Bikes Available:</strong> ${station.available_bikes}</p>
-                    <p><strong>Stands Available:</strong> ${station.available_bike_stands}</p>
-                    <p><strong>Status:</strong> ${station.status}</p>
-                    <p><strong>Location:</strong> (${station.position.lat}, ${station.position.lng})</p>
-                </div>
-            `);
-        
-            // Show the map container
-            $('#map').fadeIn();
-        
-            // Initialize the map with the station's coordinates
-            initMap(station.position.lat, station.position.lng);
-        }
+    // Load JSON data
+    $.getJSON('./json/dublinbike.json')
+        .done(data => initializeStations(data))
+        .fail(() => alert('Failed to load station data.'));
 
-        // Initialize the map with the given coordinates
-        function initMap(lat, lng) {
-            const stationLocation = { lat: lat, lng: lng };
+    // Initialize station list
+    function initializeStations(stations) {
+        displayStationList(stations);
 
-            // Create map if it doesn't exist
-            if (!map) {
-                map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 15,
-                    center: stationLocation
-                });
-                marker = new google.maps.Marker({
-                    position: stationLocation,
-                    map: map
-                });
-            } else {
-                // Update map center and marker position
-                map.setCenter(stationLocation);
-                marker.setPosition(stationLocation);
-            }
-        }
-
-        // Filter stations by name
         $('#searchBox').on('input', function () {
             const query = $(this).val().toLowerCase();
-            const filteredStations = stations.filter(station => station.name.toLowerCase().includes(query));
-        
+            const filteredStations = stations.filter(station =>
+                station.name.toLowerCase().includes(query)
+            );
             displayStationList(filteredStations);
-        
-            // Hide the map if no stations are found
-            if (filteredStations.length === 0) {
-                $('#map').fadeOut();
-                $('#stationDetail').html('<p>Select a station from the list to view details.</p>');
-            }
+            if (!filteredStations.length) $('#map').fadeOut();
         });
 
-        // Handle station clicks
         $('#stationList').on('click', '.station', function () {
             const stationId = $(this).data('id');
+            if (currentStationId === stationId) return;
+            currentStationId = stationId;
             const station = stations.find(s => s.number === stationId);
             displayStationDetail(station);
         });
+    }
 
-        // Initial display
-        displayStationList(stations);
-    });
+    // Display station list
+    function displayStationList(stations) {
+        $('#stationList').empty();
+        stations.forEach(station => {
+            $('#stationList').append(`<div class="station" data-id="${station.number}">${station.name}</div>`);
+        });
+    }
+
+    // Display station details
+    function displayStationDetail(station) {
+        $('#stationDetail').html(`
+            <div class="station-detail-card">
+                <h3>${station.name}</h3>
+                <p><strong>Address:</strong> ${station.address}</p>
+                <p><strong>Bikes Available:</strong> ${station.available_bikes}</p>
+                <p><strong>Stands Available:</strong> ${station.available_bike_stands}</p>
+                <p><strong>Status:</strong> ${station.status}</p>
+            </div>
+        `);
+        $('#map').fadeIn();
+        initMap(station.position.lat, station.position.lng);
+    }
+
+    // Initialize Google Map
+    function initMap(lat, lng) {
+        const position = { lat, lng };
+        if (!map) {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: position
+            });
+            marker = new google.maps.Marker({ position, map });
+        } else {
+            map.setCenter(position);
+            marker.setPosition(position);
+        }
+    }
 });

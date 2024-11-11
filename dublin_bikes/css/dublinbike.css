@@ -1,10 +1,10 @@
-/* Body */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -13,36 +13,40 @@ body {
     background: #f4f4f9;
     margin: 0;
 }
+
 h2 {
     text-align: center;
     color: #444;
     margin-bottom: 20px;
 }
 
-/* Container and Layout */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
 .list-container, .detail-container {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     overflow: hidden;
+    flex: 1;
 }
+
 .list-container {
-    width: 35%;
     max-height: 120vh;
 }
 .detail-container {
-    width: 60%;
+    flex: 2;
 }
 
-/* Map container */
 #map {
     width: 100%;
     height: 300px; 
@@ -52,7 +56,6 @@ h2 {
     display: none;
 }
 
-/* Search and List Styling */
 #searchBox {
     width: 100%;
     padding: 10px;
@@ -62,11 +65,13 @@ h2 {
     font-size: 1em;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 #stationList {
     max-height: calc(80vh - 0.5px);
     overflow-y: auto;
     margin-top: 10px; 
 }
+
 .station {
     padding: 15px;
     border-bottom: 1px solid #eee;
@@ -74,22 +79,24 @@ h2 {
     transition: background-color 0.2s;
     font-size: 1.1em;
 }
+
 .station:hover, .station:active {
     background-color: #e0e0e0;
 }
 
-/* Details Section Styling */
 .station-detail-card {
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .station-detail-card h3 {
     color: #333;
     margin-bottom: 10px;
     font-size: 1.4em;
 }
+
 .station-detail-card p {
     font-size: 1em;
     color: #555;
@@ -97,95 +104,135 @@ h2 {
     margin-bottom: 8px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    body {
-      text-rendering: optimizeLegibility;
-    }
-  
-    .container {
-      flex-direction: column;
-      align-items: center; /* Center elements within the container */
-    }
-  
-    /* Center the navigation bar horizontally */
-    nav {
-      justify-content: center;
-    }
-  
-    .container-menu { /* Wrap brand logo and nav toggle for centering */
-      display: flex;
-      justify-content: space-between;
-      width: 100%;  /* Take up full width on mobile */
-    }
-  
-    .list-container, .detail-container {
-      width: 100%;
-      margin: 10px 0;
-    }
-  
-    #stationList {
-      max-height: 50vh;
-      overflow-y: auto; /* Enable scrolling if needed */
-    }
-  
-    .station-detail-card h3 {
-      font-size: 1.2em;
-    }
-  
-    .station-detail-card p {
-      font-size: 0.9em;
-    }
-  
-    /* Mobile Navigation Styles */
-    .nav-toggle {
-      display: block; /* Ensure the toggle button is visible on mobile */
-    }
-  
-    .links-wrapper {
-      /* Mobile-specific styles for the navigation links */
-      position: fixed; /* Fix the menu to the top on mobile */
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; /* Stretch the menu to cover the entire viewport */
-      background-color: #f4f4f9;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      z-index: 1000; /* Ensure the menu is above other content */
-      display: none; /* Initially hide the menu */
-      transition: all 0.3s ease-in-out;
-    }
-  
-    .links-wrapper.show { /* Style for the open menu */
-      display: flex; /* Show the menu links */
-      flex-direction: column; /* Stack links vertically */
-      align-items: center; /* Center links horizontally */
-    }
-  
-    /* Adjust map size for better mobile viewing */
-    #map {
-      height: 250px; /* Reduce height for better mobile experience */
-    }
-  }
-
-nav {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    flex-direction: row;
     background-color: #ffffff;
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8em;
+    z-index: 1000;
+    color: #333;
+}
+
+#menuIcon {
+    display: inline;
+}
+
+#closeIcon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.719) ;
+        display: flex;
+        flex-direction: column; 
+        align-items: start;
+        justify-content: center;
+        gap: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: all 0.5s ease;
+    }
+
+    .navbar-links.show {
+        opacity: 5;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navbar-links a {
+        font-size: 2em;
+        text-align: left;
+        padding-left: 10px;
+        width: 100%;
+        margin-top: 10px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .navbar-links li {
+        list-style-type: none;
+    }
+
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+    }
+
+    .list-container, .detail-container {
+        width: 100%; 
+        max-height: none; 
+    }
+    
+    .list-container {
+        padding: 20px;
+    }
+
+    .detail-container {
+        padding: 10px;
+    }
 }
 
 .container {
     margin-top: 100px;
     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 #btn-cta {
     background-color: #007bff;
     color: white;
+    padding: 10px 20px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-cta i {
+    margin-left: 8px;
 }
